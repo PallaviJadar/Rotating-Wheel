@@ -1,0 +1,39 @@
+/* Step 2.1: Reset body margins for a clean layout */
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f8ff; /* Light blue background */
+}
+
+/* Step 2.2: Center the wheel */
+.wheel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+/* Step 2.3: Style the wheel */
+.wheel {
+    width: 150px;
+    height: 150px;
+    background: conic-gradient(
+        #ff6f61 0% 25%, /* Red-orange */
+        #ffc107 25% 50%, /* Yellow */
+        #8bc34a 50% 75%, /* Green */
+        #2196f3 75% 100% /* Blue */
+    );
+    border-radius: 50%; /* Make it a circle */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease;
+}
+
+/* Step 2.4: Add hover effect */
+.wheel-container:hover .wheel {
+    transform: rotate(360deg); /* Rotate 360 degrees */
+}
